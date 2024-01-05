@@ -1,5 +1,5 @@
-const time = document.querySelector(".time");
-const date = document.querySelector(".date");
+const time = document.querySelector(".clock__time");
+const date = document.querySelector(".clock__date");
 
 function getClock() {
   const dateObj = new Date();

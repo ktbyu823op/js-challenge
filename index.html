@@ -8,10 +8,21 @@
   </head>
   <body>
     <div class="clock">
-      <h1 class="time"></h1>
-      <h3 class="date"></h3>
+      <h1 class="clock__time"></h1>
+      <h3 class="clock__date"></h3>
     </div>
-
+    <form class="login-form hidden">
+      <input
+        type="text"
+        class="login-form__input"
+        placeholder="What is your name?"
+        maxlength="15"
+        required
+      />
+      <input type="submit" value="Enter" />
+    </form>
+    <h2 class="greeting hidden"></h2>
     <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
   </body>
 </html>
