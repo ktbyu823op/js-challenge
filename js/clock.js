@@ -3,7 +3,9 @@ const date = document.querySelector(".date");
 
 function getClock() {
   const dateObj = new Date();
-  time.innerText = dateObj.toLocaleTimeString();
+  const hour = dateObj.getHours();
+  const minute = String(dateObj.getMinutes()).padStart(2, "0");
+  time.innerText = `${hour}:${minute}`;
   date.innerText = dateObj.toLocaleDateString();
 }
 
