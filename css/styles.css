@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Diphylleia&display=swap");
+
+@import "reset.css";
+
+body {
+  font-family: "Dancing Script", cursive;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  height: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px 0 0;
+}
+
+.weather__icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+}
+
+.weather__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather span {
+  margin-bottom: 5px;
+  font-size: 25px;
+  color: white;
+}
+
+main {
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.clock__time {
+  color: white;
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.clock__date {
+  color: white;
+  font-size: 30px;
+}
+
+.login-form__input {
+  font-size: 40px;
+  height: 60px;
+}
+
+.login-form__input::placeholder {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+.login-form__btn {
+  height: 35px;
+  width: 70px;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+}
+
+.greeting {
+  color: white;
+  font-size: 40px;
+  font-family: "Diphylleia", serif;
+  margin-bottom: 15px;
+}
+
+.name-btn {
+  font-family: "Dancing Script", cursive;
+  font-size: 18px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.todo-form input::placeholder {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+.todo-form input {
+  width: 300px;
+  height: 35px;
+  font-size: 25px;
+  font-family: "Diphylleia", serif;
+}
+
+.todo-list {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-list li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Diphylleia", serif;
+}
+
+.todo-list button {
+  background: none;
+  border: none;
+}
+
+footer {
+  height: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 5px;
+}
+
+.quote span {
+  color: white;
+  font-size: 25px;
+  margin: 0 3px;
+}

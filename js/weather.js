@@ -1,7 +1,24 @@
-const weather = document.querySelector(".weather span:first-child");
-const city = document.querySelector(".weather span:last-child");
+const weatherIcon = document.querySelector(".weather__icon i");
+const weather = document.querySelector(".weather__text span:first-child");
+const city = document.querySelector(".weather__text span:last-child");
 
 API_KEY = "8c97137670bb0a330ec95885a452aa08";
+
+function getWeatherClass(weatherId) {
+  if (weatherId > 800) {
+    return "fa-cloud";
+  } else if (weatherId === 800) {
+    return "fa-sun";
+  } else if (weatherId >= 700) {
+    return "fa-bars-staggered";
+  } else if (weatherId >= 600) {
+    return "fa-snowflake";
+  } else if (weatherId >= 300) {
+    return "fa-cloud-showers-heavy";
+  } else if (weatherId >= 200) {
+    return "fa-cloud-bolt";
+  }
+}
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
@@ -10,14 +27,16 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      weatherIcon.className = `fa-3x fa-solid ${getWeatherClass(
+        data.weather[0].id
+      )}`;
+      weather.innerText = `${data.weather[0].main} / ${Math.round(
+        data.main.temp
+      )}`;
       city.innerText = data.name;
     });
 }
 
-function onGeoErrors() {
-  weather.innerText = "If you want to see the weather in your city";
-  city.innerText = "Allow position access";
-}
+function onGeoErrors() {}
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoErrors);

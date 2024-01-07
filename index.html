@@ -3,41 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Home</title>
   </head>
   <body>
-    <div class="clock">
-      <h1 class="clock__time"></h1>
-      <h3 class="clock__date"></h3>
-    </div>
-    <form class="login-form hidden">
-      <input
-        type="text"
-        class="login-form__input"
-        placeholder="What is your name?"
-        maxlength="15"
-        required
-      />
-      <input type="submit" value="Enter" />
-    </form>
-    <h2 class="greeting hidden"></h2>
-    <form class="todo-form">
-      <input type="text" placeholder="Write today's goal" required />
-    </form>
-    <ul class="todo-list"></ul>
-    <div class="weather">
-      <span></span>
-      <span></span>
-    </div>
-    <div class="quote">
-      <span></span>
-      <span></span>
-    </div>
+    <header>
+      <div class="weather">
+        <div class="weather__icon">
+          <i></i>
+        </div>
+        <div class="weather__text">
+          <span>If you want to see the weather in your city</span>
+          <span>Allow position access</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="clock">
+        <h1 class="clock__time"></h1>
+        <h3 class="clock__date"></h3>
+      </div>
+      <form class="login-form hidden">
+        <input
+          type="text"
+          class="login-form__input"
+          placeholder="What is your name?"
+          maxlength="15"
+          required
+        />
+        <input type="submit" value="Enter" class="login-form__btn" />
+      </form>
+      <h2 class="greeting hidden"></h2>
+      <button class="name-btn">Change your name</button>
+      <form class="todo-form">
+        <input
+          type="text"
+          placeholder="What is your goal for today?"
+          required
+        />
+      </form>
+      <ul class="todo-list"></ul>
+    </main>
+    <footer>
+      <div class="quote">
+        <span></span>
+        <span>-</span>
+        <span></span>
+      </div>
+    </footer>
     <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d4522207cd.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
