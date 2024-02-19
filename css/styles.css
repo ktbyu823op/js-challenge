@@ -50,7 +50,7 @@ header {
   align-items: center;
 }
 
-.search__input {
+.search__input--google {
   background-color: white;
   border: none;
   border-radius: 40px;
@@ -62,15 +62,50 @@ header {
   font-family: "Diphylleia", serif;
 }
 
+.search__input--google::placeholder {
+  color: black;
+  font-size: 20px;
+}
+
+.search__input--naver {
+  background-color: #1e1f21;
+  border: 2px solid #03c75a;
+  border-radius: 40px;
+  height: 100%;
+  width: 400px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Diphylleia", serif;
+}
+
 .search__icon {
   position: relative;
   right: 390px;
+}
+
+.search__icon--google {
   color: black;
 }
 
-.search__input::placeholder {
-  color: black;
+.search__icon--naver {
+  color: #03c75a;
+}
+
+.search__change-btn {
+  background: none;
+  border: none;
   font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 510px;
+}
+
+.search__change-btn--naver {
+  color: #03c75a;
 }
 
 .weather {
