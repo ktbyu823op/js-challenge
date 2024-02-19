@@ -5,6 +5,7 @@ const searchChangeBtn = document.querySelector(".search__change-btn");
 
 function onSearchSubmit(event) {
   event.preventDefault();
+
   if (searchInput.classList.contains("search__input--google")) {
     searchOnGoogle();
   } else {
